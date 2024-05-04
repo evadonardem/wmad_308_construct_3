@@ -1,0 +1,92 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-load-complete",
+					"objectClass": "System",
+					"sid": 705772885716156
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Player2",
+					"sid": 799428270094730,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player2",
+					"sid": 610478120684181,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"set": "enabled"
+					}
+				},
+				{
+					"type": "script",
+					"script": "//alert"
+				}
+			],
+			"sid": 975620872606785
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player2",
+					"sid": 705216220987421,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player2",
+					"sid": 253281336142770
+				}
+			],
+			"sid": 474346373286911
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player2",
+					"sid": 366014872658215,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Player2",
+					"sid": 785362029879727,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 335570403992883
+		}
+	],
+	"sid": 173363604068728
+}
