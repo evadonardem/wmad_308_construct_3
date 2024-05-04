@@ -1,0 +1,67 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-load-complete",
+					"objectClass": "System",
+					"sid": 113856286846333
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Sprite1",
+					"sid": 493053075693496,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Sprite.X",
+						"y": "Sprite.Y"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Sprite1",
+					"sid": 634294496219320,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"set": "disabled"
+					}
+				}
+			],
+			"sid": 611787610530735
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Sprite1",
+					"sid": 857094626746220,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Sprite",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Sprite1",
+					"sid": 117670445267258,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Sprite",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 600269080913406
+		}
+	],
+	"sid": 173363604068728
+}
