@@ -1,0 +1,66 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 339905572311767
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cone-of-view",
+					"objectClass": "Sprite2",
+					"sid": 975212148567934,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"cone-of-view": "180"
+					}
+				},
+				{
+					"id": "set-range",
+					"objectClass": "Sprite2",
+					"sid": 465808542595406,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"range": "500"
+					}
+				}
+			],
+			"sid": 275951993000002
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Sprite2",
+					"sid": 617776593576022,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Sprite",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Sprite2",
+					"sid": 735160055042661,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Sprite",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 668749890825642
+		}
+	],
+	"sid": 173363604068728
+}
