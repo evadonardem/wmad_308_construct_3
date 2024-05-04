@@ -1,0 +1,58 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 764610188069788
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Santa",
+					"sid": 417454265608967,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.X"
+					}
+				}
+			],
+			"sid": 941081296015396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Santa",
+					"sid": 871501261980809,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Santa",
+					"sid": 302062847957586,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 142236099095057
+		}
+	],
+	"sid": 173363604068728
+}
