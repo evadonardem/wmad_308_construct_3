@@ -1,0 +1,76 @@
+{
+	"name": "Truck",
+	"plugin-id": "Sprite",
+	"sid": 886580694698242,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Car",
+			"name": "Car",
+			"sid": 846178654156051
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 908570297047811
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 261528969771441
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 480,
+						"height": 520,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4404981,
+						"collisionPoly": {
+							"points": [
+								0.925,
+								0.6173076923076923,
+								0.7854166666666667,
+								0.7076923076923076,
+								0.12083333333333335,
+								0.7,
+								0.05208333333333337,
+								0.5653846153846154,
+								0.05208333333333337,
+								0.46923076923076923,
+								0.08125000000000004,
+								0.3403846153846154,
+								0.80625,
+								0.29038461538461535,
+								0.8708333333333333,
+								0.3153846153846154,
+								0.9479166666666666,
+								0.4788461538461538
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 458523154766683,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
