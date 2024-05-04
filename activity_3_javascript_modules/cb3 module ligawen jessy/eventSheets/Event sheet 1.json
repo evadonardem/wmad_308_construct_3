@@ -1,0 +1,87 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Track",
+					"sid": 570202385454765,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "newtrack",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Track",
+					"sid": 123015839121868,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"set": "disabled"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Track",
+					"sid": 897807290295860,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "newtrack",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 175341913519257
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "Track",
+					"sid": 638405527281544,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "Track",
+					"sid": 926618032011964,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 316499185045522
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 412329546983239
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Track",
+					"sid": 673700277869250,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "newtrack.x",
+						"y": "Track.y"
+					}
+				}
+			],
+			"sid": 133711247287280
+		}
+	],
+	"sid": 173363604068728
+}
