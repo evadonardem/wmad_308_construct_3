@@ -1,0 +1,61 @@
+{
+	"name": "player",
+	"plugin-id": "Sprite",
+	"sid": 848445290525797,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 692752140609127
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 674601095748082
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 539,
+						"height": 463,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5557005,
+						"collisionPoly": {
+							"points": [
+								0.0900020362451639,
+								0.00012751849018111105,
+								0.9997963754836082,
+								0.7885743432797756,
+								0.02402769293422924,
+								0.4931140015302219,
+								0.00020362451639177603,
+								0.07434327977556743
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 127118432920067,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
