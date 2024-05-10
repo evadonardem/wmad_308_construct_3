@@ -1,0 +1,117 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Monsters",
+					"sid": 703662397094490,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Monsters",
+					"sid": 819938233713616,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"set": "disabled"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Monsters",
+					"sid": 287130348236169,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 980275004215338
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "Monsters",
+					"sid": 534694784159290,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "Monsters",
+					"sid": 640401474795711,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 615082505123908
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 910385714527965
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Monsters",
+					"sid": 436972082741491,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.x",
+						"y": "Player.y"
+					}
+				}
+			],
+			"sid": 885308785809355
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 518201043959640,
+					"parameters": {
+						"object": "Monsters"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 896396408469771,
+					"parameters": {
+						"animation": "\"Animation2\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 200196622195535
+				}
+			],
+			"sid": 520187013884047
+		}
+	],
+	"sid": 508546270354641
+}
