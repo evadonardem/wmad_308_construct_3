@@ -1,0 +1,163 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 358634873788839
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "enemy",
+					"sid": 830601418250201,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 967050001911847,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TiledBackground"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 518902749288319,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TiledBackground"
+					}
+				}
+			],
+			"sid": 750135852743387
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "enemy",
+					"sid": 730319062661372,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "enemy",
+					"sid": 141275650246355,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 408177614569886
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "ray-intersected",
+					"objectClass": "enemy",
+					"sid": 869921345504754,
+					"behaviorType": "LineOfSight"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "enemy",
+					"sid": 101722921873237,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 780411211966689
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "enemy",
+					"sid": 755536397788071,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "player",
+						"image-point": "0"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "enemy",
+					"sid": 645868373039906,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"set": "disabled"
+					}
+				}
+			],
+			"sid": 245860634148000
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 471516789073488,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "player",
+					"sid": 464008873898514,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 491923143194662
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 374819515719103,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "player",
+					"sid": 768552419219920,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 548861513012191
+		}
+	],
+	"sid": 249599095410083
+}
